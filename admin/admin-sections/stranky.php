@@ -166,8 +166,8 @@ switch ($akce) {
                             <i class="fas fa-arrow-left"></i> Zpět na seznam
                         </a>
                         <?php if ($akce === 'upravit' && $stranka): ?>
-                        <a href="../index.php?id-stranky=<?php echo h($stranka['slug']); ?>" 
-                           class="admin-button btn-info" target="_blank">
+                        <a href="index.php?id-stranky=<?php echo h($stranka['slug']); ?>" 
+                           class="admin-button" target="_blank">
                             <i class="fas fa-eye"></i> Zobrazit stránku
                         </a>
                         <?php endif; ?>
@@ -255,7 +255,7 @@ switch ($akce) {
                                        style="background: #f57c00; color: white; padding: 6px 10px; border-radius: 4px; text-decoration: none; font-size: 12px;">
                                         ✏️
                                     </a>
-                                    <a href="../index.php?id-stranky=<?php echo urlencode($stranka['slug']); ?>" 
+                                    <a href="index.php?id-stranky=<?php echo urlencode($stranka['slug']); ?>" 
                                        target="_blank"
                                        style="background: #2196f3; color: white; padding: 6px 10px; border-radius: 4px; text-decoration: none; font-size: 12px;">
                                         👁️

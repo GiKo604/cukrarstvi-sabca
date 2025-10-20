@@ -1,7 +1,7 @@
      <nav class="hl-nav">
                 <ul>
                     <?php
-                        foreach($vsechnyStranky as $stranka) {
+                        foreach($poleStranek as $stranka) {
                             if ($stranka['menu'] == "") {
                                 continue; 
                             }
