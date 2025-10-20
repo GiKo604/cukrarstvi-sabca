@@ -504,7 +504,10 @@ if ($prihlasen) {
                     <i class="fas fa-chart-line"></i> Dashboard
                 </a>
                 <a href="?sekce=stranky" class="nav-button <?php echo $sekce == 'stranky' ? 'active' : ''; ?>">
-                    <i class="fas fa-file-alt"></i> Stránky
+                    <i class="fas fa-database"></i> Stránky (DB)
+                </a>
+                <a href="?sekce=stranky-html" class="nav-button <?php echo $sekce == 'stranky-html' ? 'active' : ''; ?>">
+                    <i class="fas fa-file-alt"></i> Stránky (HTML)
                 </a>
                 <a href="?sekce=recepty" class="nav-button <?php echo $sekce == 'recepty' ? 'active' : ''; ?>">
                     <i class="fas fa-utensils"></i> Recepty
@@ -542,6 +545,9 @@ if ($prihlasen) {
                         break;
                     case 'stranky':
                         include 'admin-sections/stranky.php';
+                        break;
+                    case 'stranky-html':
+                        include 'admin-sections/stranky-html.php';
                         break;
                     case 'recepty':
                         include 'admin-sections/recepty.php';
