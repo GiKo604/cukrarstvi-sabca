@@ -64,8 +64,13 @@
             ?>
     </header>
     <?php
+        // Nejdřív zkusíme PHP soubor, pak HTML
+        $phpSoubor = "{$idStranky}.php";
         $htmlSoubor = "{$idStranky}.html";
-        if (file_exists($htmlSoubor)) {
+        
+        if (file_exists($phpSoubor)) {
+            include $phpSoubor;
+        } elseif (file_exists($htmlSoubor)) {
             include $htmlSoubor;
         } else {
             echo "<main><h1>Stránka nenalezena</h1><p>Požadovaná stránka neexistuje.</p></main>";

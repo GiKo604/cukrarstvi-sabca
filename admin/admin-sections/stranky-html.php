@@ -23,8 +23,8 @@ $editovatelneStranek = [
     ],
     'recepty' => [
         'nazev' => 'Recepty', 
-        'soubor' => '../recepty.html',
-        'popis' => 'Seznam receptů a návodů'
+        'soubor' => '../recepty.php',
+        'popis' => 'Dynamické recepty z databáze (jen pro pokročilé úpravy)'
     ]
 ];
 
