@@ -1,0 +1,17 @@
+# Základní .htaccess pro XAMPP
+
+# Zakázání zobrazování indexu složek
+Options -Indexes
+
+# Ochrana citlivých souborů
+<Files "*.php~">
+    Require all denied
+</Files>
+
+<Files "*.bak">
+    Require all denied
+</Files>
+
+<Files "konfigurace-*.php">
+    Require all denied
+</Files>

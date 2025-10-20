@@ -1,0 +1,32 @@
+
+--------------------------------------------------
+Datum: 2025-10-18 09:26:04
+Jméno: Josef
+Email: sobekjoey@gmail.com
+IP adresa: ::1
+Zpráva:
+sdasdasdasdsdasdasd
+
+--------------------------------------------------
+Datum: 2025-10-18 09:26:45
+Jméno: Josef
+Email: sobekjoey@gmail.com
+IP adresa: ::1
+Zpráva:
+Tohle je testová zpráva, abych otestoval cestu zprávy do záloh.
+
+--------------------------------------------------
+Datum: 2025-10-18 10:35:54
+Jméno: Josef
+Email: sobekjoey@gmail.com
+IP adresa: ::1
+Zpráva:
+Tohle je jenom test toho, jestli se to propíše
+
+--------------------------------------------------
+Datum: 2025-10-18 10:39:04
+Jméno: Josef
+Email: sobekjoey@gmail.com
+IP adresa: ::1
+Zpráva:
+Tohle je testovací zpráva do objednávek

@@ -1,0 +1,7 @@
+Stránky
+každá stránka bude mít menu s proklikem na další stránky
+
+    Domů
+    - Krátké info
+    - Nejnovější recepty
+    

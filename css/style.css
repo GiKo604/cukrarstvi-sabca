@@ -1,0 +1,772 @@
+/* Font imports */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+/* Smooth scrolling for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Background watermark */
+body::before {
+    content: "Sabčino zázračné cukrářství";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: clamp(4rem, 1vw, 10rem);
+    color: rgba(240, 223, 179, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: -1;
+    pointer-events: none;
+    transform: rotate(-15deg);
+    white-space: nowrap;
+    overflow: hidden;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../fonts/montserrat-v31-latin_latin-ext-regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('../fonts/montserrat-v31-latin_latin-ext-700.woff2') format('woff2');
+}
+
+/* Heading Styling */
+.container:not(.hl-nav) {
+    text-align: center;
+}
+.container a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-style: bold;
+    font-weight: 700;
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+/* Main heading styling */
+main h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-style: bold;
+    font-weight: 700;
+    font-size: 50px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 20px 0;
+}
+
+main a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navigation Styling */
+.hl-nav ul {
+    list-style: none;           /* Odebere odrážky */
+    margin-top: 60px;                  /* Odebere výchozí margin */
+    padding: 0;                 /* Odebere výchozí padding */
+    display: flex;              /* Položky vedle sebe */
+    gap: 30px;                  /* Mezery mezi položkami */
+    align-items: center;        /* Vertikální zarovnání na střed */
+    justify-content: center;    /* Horizontální vycentrování */
+    font-size: 30px;            /* Velikost písma */
+    
+}
+
+.hl-nav li {
+    margin: 0;                  /* Odebere výchozí margin z li */
+}
+
+.hl-nav a {
+    text-decoration: none;      /* Odebere podtržení odkazů */
+    color: #333;                /* Barva textu */
+    font-style: bold;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;           /* Tučný text */
+    padding: 10px 15px;         /* Vnitřní odsazení pro klikatelnou oblast */
+    border-radius: 5px;         /* Zaoblené rohy */
+    transition: all 0.2s ease;  /* Plynulé přechody */
+    text-transform: uppercase;
+}
+
+.hl-nav a:hover {
+    background-color: #f0e7d0;  /* Pozadí při hoveru */
+    color: #775919;             /* Barva textu při hoveru */
+    transform: translateY(-2px); /* Mírné posunutí nahoru */
+    border-bottom: 2px solid #775919;
+    padding-bottom: 10px;
+}
+
+/* Social Icons Styling */
+.headerTop {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 40px;
+}
+.headerTop a {
+    color: #6c757d;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s ease;
+    transform: scale(1);
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+}
+.headerTop a:hover {
+    color: #834912;
+}
+
+.socIkon {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 40px;
+}
+
+.socIkon a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #f8f9fa;
+    border: 2px solid #e9ecef;
+    border-radius: 50%;
+    color: #6c757d;
+    font-size: 18px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover efekty pro jednotlivé sociální sítě */
+.socIkon a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Facebook hover */
+.socIkon a:hover .fa-facebook-f {
+    color: #1877f2;
+}
+
+.socIkon a:has(.fa-facebook-f):hover {
+    background-color: #1877f2;
+    border-color: #1877f2;
+}
+
+.socIkon a:has(.fa-facebook-f):hover .fa-facebook-f {
+    color: white;
+}
+
+/* Instagram hover */
+.socIkon a:hover .fa-instagram {
+    color: #e4405f;
+}
+
+.socIkon a:has(.fa-instagram):hover {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    border-color: #e4405f;
+}
+
+.socIkon a:has(.fa-instagram):hover .fa-instagram {
+    color: white;
+}
+
+/* YouTube hover */
+.socIkon a:hover .fa-youtube {
+    color: #ff0000;
+}
+
+.socIkon a:has(.fa-youtube):hover {
+    background-color: #ff0000;
+    border-color: #ff0000;
+}
+
+.socIkon a:has(.fa-youtube):hover .fa-youtube {
+    color: white;
+}
+
+.middle-img {
+    display: flex;              /* Obrázky vedle sebe */
+    gap: 0;                     /* Žádné mezery - obrázky těsně k sobě */
+    overflow: hidden;           /* Skryje přetečení */
+    padding: 0;                 /* Bez paddingu */
+    margin: 60px 0;             /* Pouze vertikální margin */
+    width: 100vw;               /* Celá šířka viewportu */
+    position: relative;         
+    left: 50%;                  /* Posun o 50% doprava */
+    transform: translateX(-50%); /* Zpět o 50% vlastní šířky = střed */
+    margin-left: 0;             /* Reset margin-left */
+}
+
+.middle-img img {
+    flex: 1;                    /* Každý obrázek zabere stejný prostor */
+    height: 200px;              /* Jednotná výška všech obrázků */
+    width: 100%;                /* Vyplní dostupný prostor */
+    border-radius: 0;           /* Bez zaoblených rohů pro bezešvé spojení */
+    box-shadow: none;           /* Bez stínů pro čistý pruh */
+    object-fit: cover;          /* Obrázky se ořežou proporcionálně */
+    transition: transform 0.3s ease; /* Animace pro hover */
+}
+
+/* Links v middle-img */
+.middle-img a {
+    flex: 1;                    /* Odkazy zabírají stejný prostor */
+    display: block;             /* Celý odkaz je klikatelný */
+    position: relative;         /* Pro overlay efekty */
+    overflow: hidden;           /* Skryje přetečení při animaci */
+}
+
+.middle-img a:hover img {
+    transform: scale(1.1);      /* Zvětšení obrázku při hoveru */
+    filter: brightness(0.8);    /* Tmavší při hoveru */
+}
+
+.middle-img a::after {
+    content: attr(title);       /* Zobrazí název receptu */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    color: white;
+    padding: 20px 10px 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
+    transform: translateY(100%); /* Skryto pod obrázkem */
+    transition: transform 0.3s ease;
+}
+
+.middle-img a:hover::after {
+    transform: translateY(0);   /* Zobrazí se při hoveru */
+}
+
+/* Recepty stránka styling */
+.recepty-container {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.recept-karta {
+    background: rgb(240, 223, 179);
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recept-karta:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.recept-obrazek {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.recept-karta:hover .recept-obrazek {
+    transform: scale(1.05);
+}
+
+.recept-obsah {
+    padding: 25px;
+}
+
+.recept-obsah h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: #333;
+    margin: 0 0 15px 0;
+    text-align: center;
+}
+
+.recept-info {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+.recept-info span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.recept-info i {
+    color: #e9a21e;
+}
+
+.recept-obsah h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: #834912;
+    margin: 20px 0 10px 0;
+}
+
+.recept-obsah ul, 
+.recept-obsah ol {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.recept-obsah li {
+    margin-bottom: 5px;
+}
+
+.recept-obsah ol li {
+    margin-bottom: 8px;
+}
+
+/* Responzivní design */
+@media (max-width: 768px) {
+    .recepty-container {
+        grid-template-columns: 1fr;
+        padding: 0 15px;
+        gap: 20px;
+    }
+    
+    .recept-obsah {
+        padding: 20px;
+    }
+    
+    .recept-obsah h2 {
+        font-size: 20px;
+    }
+}
+
+/* Styling pro paragraf na domovské stránce */
+main p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+    text-align: justify;
+    margin: 40px auto;
+    padding: 30px;
+    max-width: 1000px;
+    background: rgb(240, 223, 179);
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+main p:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive design pro paragrafy */
+@media (max-width: 768px) {
+    main p {
+        margin: 20px 15px;
+        padding: 20px;
+        font-size: 14px;
+        line-height: 1.6;
+        max-width: none;
+    }
+}
+
+/* Galerie styling */
+.galerie-container {
+    max-width: 1130px;
+    margin: 80px auto 40px auto;
+    padding: 0 20px;
+}
+
+/* Kategorie styling */
+.galerie-kategorie {
+    margin-bottom: 60px;
+}
+
+.kategorie-nadpis {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: linear-gradient(135deg, rgb(240, 223, 179) 0%, rgb(230, 205, 150) 100%);
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.galerie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.galerie-item {
+    position: relative;
+    background: rgb(240, 223, 179);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    aspect-ratio: 1;
+}
+
+.galerie-item:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.galerie-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.galerie-item:hover img {
+    transform: scale(1.1);
+    filter: brightness(1.1) contrast(1.1);
+}
+
+/* Responsive galerie */
+@media (max-width: 768px) {
+    .galerie-container {
+        padding: 0 15px;
+        margin: 20px auto;
+    }
+    
+    .galerie-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .galerie-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+}
+
+/* Formulář styling */
+main form {
+    max-width: 600px;
+    margin: 80px auto 40px auto;
+    padding: 40px;
+    background: rgb(240, 223, 179);
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    font-family: 'Montserrat', sans-serif;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+main form:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+main form label {
+    display: block;
+    font-weight: 700;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 8px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+main form label:first-of-type {
+    margin-top: 0;
+}
+
+main form input[type="text"],
+main form input[type="email"],
+main form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+main form input[type="text"]:focus,
+main form input[type="email"]:focus,
+main form textarea:focus {
+    outline: none;
+    border-color: #834912;
+    box-shadow: 0 6px 15px rgba(233, 30, 99, 0.2);
+    transform: translateY(-2px);
+}
+
+main form textarea {
+    min-height: 120px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+main form button {
+    width: 100%;
+    padding: 18px;
+    margin-top: 30px;
+    background: linear-gradient(135deg, #834912 0%, #654321 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 15px rgba(233, 30, 99, 0.3);
+}
+
+main form button:hover {
+    background: linear-gradient(135deg, #654321 0%, #543310 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(233, 30, 99, 0.4);
+}
+
+main form button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(233, 30, 99, 0.3);
+}
+
+/* Responzivní formulář */
+@media (max-width: 768px) {
+    main form {
+        margin: 40px 15px;
+        padding: 25px;
+    }
+    
+    main form label {
+        font-size: 14px;
+    }
+    
+    main form input[type="text"],
+    main form input[type="email"],
+    main form textarea {
+        padding: 12px;
+        font-size: 13px;
+    }
+    
+    main form button {
+        padding: 15px;
+        font-size: 14px;
+    }
+}
+
+/* Kontaktní informace styling */
+.kontakt-info {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.oteviraci-doba,
+.mapa-sekce {
+    background: rgb(240, 223, 179);
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.oteviraci-doba:hover,
+.mapa-sekce:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.oteviraci-doba h2,
+.mapa-sekce h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.oteviraci-doba h2 i,
+.mapa-sekce h2 i {
+    color: #834912;
+    margin-right: 10px;
+}
+
+.doba-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.den {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+}
+
+.den:hover {
+    transform: translateX(5px);
+}
+
+.den.weekend {
+    background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+}
+
+.den-nazev {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #333;
+}
+
+.cas {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #834912;
+}
+
+.kontakt-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+.kontakt-udaje {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.udaj {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+}
+
+.udaj:hover {
+    transform: translateX(5px);
+}
+
+.udaj i {
+    color: #834912;
+    font-size: 18px;
+    margin-top: 2px;
+}
+
+.udaj div {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+}
+
+.udaj strong {
+    color: #333;
+    font-weight: 700;
+}
+
+.mapa-kontejner {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.mapa-kontejner iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+}
+
+/* Responzivní kontakt */
+@media (max-width: 768px) {
+    .kontakt-info {
+        padding: 0 15px;
+    }
+    
+    .oteviraci-doba,
+    .mapa-sekce {
+        padding: 20px;
+    }
+    
+    .kontakt-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .mapa-kontejner iframe {
+        height: 250px;
+    }
+    
+    .oteviraci-doba h2,
+    .mapa-sekce h2 {
+        font-size: 20px;
+    }
+}

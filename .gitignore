@@ -1,0 +1,60 @@
+# Databázové připojení a konfigurace
+config/database-local.php
+config/production.php
+
+# Upload složky - nyní zahrnujeme obrázky pro demo
+# uploads/* - zakomentováno, chceme nahrát existující obrázky
+# !uploads/.gitkeep
+# !uploads/recepty/.gitkeep
+# !uploads/galerie/.gitkeep  
+# !uploads/thumbnails/.gitkeep
+
+# Pouze vyloučíme velmi velké soubory (>10MB)
+uploads/**/*.tmp
+uploads/**/*.temp
+
+# Dočasné soubory
+*.tmp
+*.temp
+temp/
+
+# Logy
+*.log
+logs/
+
+# IDE soubory
+.vscode/
+.idea/
+*.sublime-*
+
+# OS soubory
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# PHP cache
+*.cache
+
+# Zálohové soubory
+*.bak
+*.backup
+backup/
+*.sql
+
+# Debug a testovací soubory
+admin/debug-*.php
+admin/test-*.php
+admin/check-*.php
+admin/create-test-data.php
+admin/create-missing-thumbnails.php
+tools/create-missing-thumbnails.php
+
+# Vendor složky (pokud použijeme Composer)
+vendor/
+
+# Node modules (pokud použijeme npm)
+node_modules/
+
+# Výstupní soubory
+dist/
+build/
