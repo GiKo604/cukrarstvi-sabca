@@ -22,11 +22,6 @@
             "titulek" => "Recepty",
             "menu"    => "Recepty",
         ],
-        "objednavky" => [
-            "id"      => "objednavky",
-            "titulek" => "Objednávky",
-            "menu"    => "Objednávky",
-        ],
     ];
     $idStranky = "domu"; //výchozí stránka
     if (array_key_exists("id-stranky", $_GET)) {

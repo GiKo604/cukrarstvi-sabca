@@ -63,7 +63,7 @@ try {
     echo "<div class='step'>";
     echo "<h3>📋 KROK 4: Import databázových tabulek</h3>";
     
-    $sqlFile = 'database/cukrarstvi_sabca.sql';
+    $sqlFile = 'database/schema.sql';
     
     if (file_exists($sqlFile)) {
         $sql = file_get_contents($sqlFile);
@@ -81,6 +81,28 @@ try {
         }
         
         echo "<p class='success'>✅ Import dokončen! Spuštěno $executed SQL příkazů.</p>";
+        
+        // Aplikování patch pro správné fungování admin stránek
+        echo "<p class='info'>🔧 Aplikování oprav pro admin rozhraní...</p>";
+        $patchFile = 'database/patch-stranky.sql';
+        if (file_exists($patchFile)) {
+            try {
+                $patchSql = file_get_contents($patchFile);
+                $patchStatements = explode(';', $patchSql);
+                $patchExecuted = 0;
+                
+                foreach ($patchStatements as $statement) {
+                    $statement = trim($statement);
+                    if (!empty($statement) && !preg_match('/^--/', $statement) && !preg_match('/^DESCRIBE/', $statement)) {
+                        $pdo->exec($statement);
+                        $patchExecuted++;
+                    }
+                }
+                echo "<p class='success'>✅ Admin opravy aplikovány! ($patchExecuted příkazů)</p>";
+            } catch (Exception $e) {
+                echo "<p class='info'>ℹ️ Některé opravy již byly aplikovány nebo nejsou potřeba.</p>";
+            }
+        }
     } else {
         echo "<p class='error'>❌ SQL soubor nenalezen: $sqlFile</p>";
         echo "<p class='info'>💡 Zkopírujte SQL soubor do složky database/</p>";
