@@ -1,53 +1,113 @@
-# Cukrářství Šábca - Admin CMS
+# 🧁 CMS Systém pro Cukrářství
 
-## Popis
-Kompletní systém pro správu obsahu pekařství a cukrářství s administrátorským rozhraním, správou receptů, galerie a kontaktních zpráv.
+Kompletní admin systém pro správu webových stránek cukrářství s recepty, galerií a kontaktními informacemi.
 
-## ✨ Funkce
+## 🚀 **Rychlé spuštění (5 minut)**
 
-### 🔧 Administrace
-- **Správa stránek** - WYSIWYG editor, SEO nastavení, URL slugy
-- **Správa receptů** - Upload obrázků, kategorie, ingredience, postup
-- **Správa galerie** - Batch upload, kategorizace, thumbnail generování
-- **Správa zpráv** - Kontaktní formulář, filtry, stavy zpráv
-- **Nastavení systému** - Změna hesla, údržba, systémové informace
+### **Požadavky:**
+- **XAMPP** (Apache + MySQL + PHP)
+- **Webový prohlížeč**
 
-### 🎨 Frontend
-- Responzivní design
-- Moderní CSS s gradients
-- Optimalizované obrázky s thumbnaily
-- SEO optimalizace
+---
 
-### 🛠️ Technické vlastnosti
-- **PHP 7.4+** s PDO databází
-- **MySQL** databáze
-- **TinyMCE** WYSIWYG editor
-- **FontAwesome** ikony
-- **Bezpečnostní funkce** - session management, SQL injection ochrana
-- **Upload systém** - automatické thumbnail generování
+## 📥 **1. Stažení a instalace**
 
-## Struktura projektu
+### **A) Stažení z GitHub:**
+```bash
+git clone https://github.com/GiKo604/cukrarstvi-sabca.git
+```
 
-### Hlavní soubory
-- `index.php` - Hlavní vstupní bod s PHP routingem
-- `domu.html` - Domovská stránka
-- `galerie.html` - Galerie obrázků rozdělená do kategorií
-- `recepty.html` - Stránka s recepty
-- `kontakt.html` - Kontaktní formulář
-- `zpracovani-formulare.php` - PHP zpracování kontaktního formuláře
+### **B) Nebo stažení ZIP:**
+1. Klikněte **"Code" → "Download ZIP"** na GitHub
+2. Rozbalte do `C:\xampp\htdocs\cukrarstvi-sabca\`
 
-### Konfigurace a administrace
-- `konfigurace-formulare.php` - Konfigurace pro formuláře
-- `admin.php` - Administrační rozhraní pro zobrazení přijatých zpráv
-- `.htaccess` - Bezpečnostní a optimalizační nastavení
+---
 
-### Složky
-- `css/` - Stylové soubory
-- `img/` - Obrázky
-- `komponenty/` - PHP komponenty (menu.php)
-- `zalohy/` - Automaticky vytvořená složka pro zálohy zpráv
+## 🗄️ **2. Nastavení databáze**
 
-## Instalace a nastavení
+### **Spuštění XAMPP:**
+1. Spusťte **XAMPP Control Panel**
+2. Zapněte **Apache** a **MySQL**
+
+### **Vytvoření databáze:**
+1. Otevřete http://localhost/phpmyadmin/
+2. Klikněte **"New"** (Nová)
+3. Název databáze: **`cukrarstvi_sabca`**
+4. Klikněte **"Create"**
+
+### **Import dat:**
+1. Vyberte databázi `cukrarstvi_sabca`
+2. Klikněte záložku **"Import"**
+3. Vyberte soubor: `database/cukrarstvi_sabca.sql`
+4. Klikněte **"Import"** (Go)
+
+---
+
+## 🌐 **3. Spuštění webu**
+
+### **Frontend (návštěvníci):**
+📧 **http://localhost/cukrarstvi-sabca/**
+
+### **Admin rozhraní:**
+🔐 **http://localhost/cukrarstvi-sabca/admin/admin-new.php**
+
+**Přihlašovací údaje:**
+- **Uživatel:** `admin`  
+- **Heslo:** `admin123`
+
+> ⚠️ **DŮLEŽITÉ:** Změňte heslo po prvním přihlášení!
+
+---
+
+## ✨ **Co systém umí**
+
+### **� Pro návštěvníky:**
+- 🏠 **Hlavní stránka** s prezentací
+- 🍰 **Recepty** s obrázky a postupy  
+- 🖼️ **Galerie** s fotografiemi výrobků
+- 📞 **Kontakty** s formulářem
+
+### **🔧 Admin funkce:**
+- ✅ **Správa stránek** (editace obsahu)
+- 📝 **Správa receptů** (přidání/úprava/smazání)
+- 🖼️ **Správa galerie** (nahrávání obrázků)
+- 🗂️ **Automatické thumbnail** generování
+- 📧 **Správa kontaktů** a zpráv
+
+---
+
+## 🛠️ **Řešení problémů**
+
+### **Nevidím obrázky:**
+- Zkontrolujte oprávnění složky `uploads/` (775)
+- Ověřte, že Apache běží
+
+### **Chyba připojení k databázi:**
+- Zkontrolujte běh MySQL v XAMPP
+- Ověřte nastavení v `config/databaze-config.php`
+
+### **Nelze se přihlásit do adminu:**
+- Uživatel: `admin`, heslo: `admin123`
+- Zkontrolujte import databáze
+
+---
+
+## 📁 **Struktura projektu**
+
+```
+cukrarstvi-sabca/
+├── 📄 index.html              # Hlavní stránka
+├── 🔐 admin/                  # Admin rozhraní
+├── ⚙️ config/                # Konfigurace databáze
+├── 📸 uploads/               # Nahrané obrázky (74 demo)
+├── 🗄️ database/             # SQL soubory
+├── 🧩 includes/             # PHP komponenty
+└── 📖 README.md             # Tento návod
+```
+
+---
+
+## Detailní popis funkcí
 
 ### 1. Základní nastavení
 1. Nahrajte všechny soubory na web server s podporou PHP

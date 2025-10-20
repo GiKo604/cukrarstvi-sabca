@@ -12,7 +12,7 @@ function h($string) {
 session_start();
 
 // Jednoduché heslo pro přístup (později nahradíme databází)
-$admin_heslo = "sabinajede123"; // ZMĚŇTE TOTO HESLO!
+$admin_heslo = "admin123"; // Výchozí heslo - ZMĚŇTE PO INSTALACI!
 
 if (isset($_POST['prihlasit'])) {
     if ($_POST['heslo'] == $admin_heslo) {
