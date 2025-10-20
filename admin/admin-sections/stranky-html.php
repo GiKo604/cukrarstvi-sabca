@@ -76,11 +76,6 @@ function nacistObsahHTML($soubor) {
     return file_get_contents($soubor);
 }
 
-// Funkce pro bezpečné zobrazení textu
-function h($text) {
-    return htmlspecialchars($text, ENT_QUOTES, 'UTF-8');
-}
-
 // Zobrazení podle akce
 switch ($akce) {
     case 'upravit':
